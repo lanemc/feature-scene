@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+- ../base
+
+namespace: feature-scene-staging
+
+patchesStrategicMerge:
+- deployment-patches.yaml
+
+configMapGenerator:
+- name: feature-scene-config
+  literals:
+  - NODE_ENV=staging
+  - LOG_LEVEL=debug
+  - BATCH_SCHEDULE_CRON=0 */6 * * *
+
+images:
+- name: feature-scene-backend
+  newTag: staging
+- name: feature-scene-frontend
+  newTag: staging
