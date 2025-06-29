@@ -1,0 +1,15 @@
+{
+  "version": "1.0.72",
+  "project": {
+    "name": "feature-scene",
+    "type": "claude-flow",
+    "created": "2025-06-29T19:33:15.328Z"
+  },
+  "features": {
+    "swarm": true,
+    "sparc": false,
+    "memory": true,
+    "terminal": true,
+    "mcp": true
+  }
+}
