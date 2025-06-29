@@ -1,0 +1,67 @@
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid transparent;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card.success {
+  border-left-color: #10b981;
+}
+
+.card.error {
+  border-left-color: #ef4444;
+}
+
+.card.warning {
+  border-left-color: #f59e0b;
+}
+
+.card.info {
+  border-left-color: #3b82f6;
+}
+
+.card.neutral {
+  border-left-color: #6b7280;
+}
+
+.title {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.trend svg {
+  color: currentColor;
+}
+
+.card.success .trend {
+  color: #10b981;
+}
+
+.card.error .trend {
+  color: #ef4444;
+}

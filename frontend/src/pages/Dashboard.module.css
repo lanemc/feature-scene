@@ -1,0 +1,116 @@
+.dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.batchStatus {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.running {
+  color: #f59e0b;
+  animation: pulse 2s infinite;
+}
+
+.idle {
+  color: #10b981;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  color: #718096;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.chartSection,
+.insightsSection {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chartSection h2,
+.insightsSection h2,
+.dropoffsSection h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.dropoffsSection {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dropoffsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dropoffItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.dropoffInfo h4 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.dropoffInfo p {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.dropoffRate {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e53e3e;
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+}

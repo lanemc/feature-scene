@@ -1,0 +1,218 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.runButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.runButton:hover:not(:disabled) {
+  background: #059669;
+}
+
+.runButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.currentJob {
+  margin-bottom: 3rem;
+}
+
+.currentJob h2,
+.history h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.jobCard {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid transparent;
+}
+
+.jobCard.running {
+  border-left-color: #f59e0b;
+}
+
+.jobCard.completed {
+  border-left-color: #10b981;
+}
+
+.jobCard.failed {
+  border-left-color: #ef4444;
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.jobStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.running .jobStatus {
+  color: #f59e0b;
+}
+
+.completed .jobStatus {
+  color: #10b981;
+}
+
+.failed .jobStatus {
+  color: #ef4444;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.jobId {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-family: monospace;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric {
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.metricLabel {
+  display: block;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.metricValue {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.error {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.error h4 {
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+}
+
+.error p {
+  color: #7f1d1d;
+  font-size: 0.875rem;
+}
+
+.jobFooter {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #6b7280;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.history {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.historyItem {
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 6px;
+  border-left: 3px solid transparent;
+}
+
+.historyItem.completed {
+  border-left-color: #10b981;
+}
+
+.historyItem.failed {
+  border-left-color: #ef4444;
+}
+
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.historyDate {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.historySummary {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.noHistory {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+  background: #f9fafb;
+  border-radius: 6px;
+  border: 1px dashed #e5e7eb;
+}
